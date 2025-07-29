@@ -1,8 +1,8 @@
 "use server";
 import { auth } from "@/auth";
-import { SignInButton } from "@/components/sign-in-button";
+import { SignInGithubButton } from "@/components/ui/sign-in-github-button";
 import Link from "next/link";
-import { SignOutButton } from "@/components/sign-out-button";
+import { SignOutButton } from "@/components/ui/sign-out-button";
 
 export default async function Home() {
   const session = await auth();
@@ -19,7 +19,7 @@ export default async function Home() {
     <div>
       {""}
       <p>You Are Not Signed In</p> {""}
-      <SignInButton />
+      <SignInGithubButton />
     </div>
   );
 }
